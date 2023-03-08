@@ -2,6 +2,7 @@
 
 
 def main():
+    curr_password = ''
     while True:
 
         # Print menu
@@ -13,8 +14,6 @@ def main():
         print()
 
         choice = input("Please enter an option: ")
-
-        curr_password = ""
 
         if choice == "1":
             original = input("Please enter your password to encode: ")
@@ -46,7 +45,15 @@ def encode(original):
 
 
 def decode(password):
-    pass
+    password_string = password
+    decoded_password_string = ''
+    for i in password_string:
+        decoded_value = int(i) - 3
+        if decoded_value < 0:
+            decoded_value += 10
+        decoded_password_string += str(decoded_value)
+    decoded_password = decoded_password_string
+    return decoded_password
 
 
 if __name__ == "__main__":
