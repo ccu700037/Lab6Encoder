@@ -1,4 +1,4 @@
-# Sharanya's Code
+# Main and encode function by Sharanya
 
 
 def main():
